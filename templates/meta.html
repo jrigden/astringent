@@ -1,0 +1,13 @@
+<!-- Twitter -->
+{% if article.featured_image %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% else %}
+  <meta name="twitter:card" content="summary" />
+{% endif %}
+<meta name="twitter:site" content="@{{SITE_TWITTER}}">
+<meta name="twitter:creator" content="@{{AUTHOR_TWITTER}}">
+<meta name="twitter:title" content="{{ article.title }}">
+<meta name="twitter:description" content="{{ article.summary }}">
+{% if article.featured_image %}
+  <meta name="twitter:image" content="{{ article.featured_image }}">
+{% endif %}

@@ -1,0 +1,17 @@
+<header>
+    <div class="header-title">
+        <a href="/">
+      IPSUT SOLUTIONS
+    </a>
+    </div>
+    <div class="menu">
+        <div class="menu-row">
+            {% for title, link in MENUITEMS %}
+            <div class="menu-item">
+                <a href="{{ link }}">{{title}}</a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</header>
