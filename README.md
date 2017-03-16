@@ -1,6 +1,6 @@
 astringent
 ======
-**astringent** is a theme for the [Pelican](https://github.com/getpelican/pelican) static site generator. It is a brutalist inspired 2 color theme. It is used by the Ipsut Solutions blog.
+**astringent** is a theme for the [Pelican](https://github.com/getpelican/pelican) static site generator. It is a [brutalist](https://twitter.com/mr_rigden/status/842423824117194752) inspired 2 color theme. It is used by the Ipsut Solutions blog.
 
 ## Screenshot
 ![Screenshot](screen_shot-min.png)
