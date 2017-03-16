@@ -1,5 +1,24 @@
-{% extends "index.html" %}
-{% block content_title %}
-<h2>Articles in the {{ category }} category</h2>
-{% endblock %}
+{% extends "base.html" %}
 
+{% block head %}
+  {{ super() }}
+  <title>{{ SITENAME }}</title>
+  <link rel="canonical" href="{{ SITEURL }}/{{ category.url }}" />
+{% endblock head %}
+
+{% block content_title %}
+  {% if category == "Podcast" %}
+    <h2>Podcast Page</h2>
+  {% else %}
+    <h2>Articles Categorized As {{ category }}</h2>
+  {% endif %}
+{% endblock content_title %}
+
+
+{% block content %}
+  {% if category == "Podcast" %}
+    {% include "podcast.html" %}
+  {% else %}
+    Cat Stiff
+  {% endif %}
+{% endblock content %}

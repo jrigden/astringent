@@ -1,0 +1,26 @@
+<h1>Mr. Rigden's Q&amp;A</h1>
+<p>
+  Mr. Rigden answers your questions about SEO, Socail Media.
+</p>
+<div class="podcast-buttons">
+
+  <h2>Subscribe</h2>
+
+    <div class="subscribe-button">
+      <script>window.podcastData={"title":"Mr. Rigden's Q&A","subtitle":"Internet Marketing Advice from a completely unqualified man","description":"Each week Mr. Rigden aswers you questions about internet marketing.","cover":"http://lorempixel.com/400/400/","feeds":[{"type":"audio","format":"mp3","url":"http://127.0.0.1:35729/category/podcast.html"}]}</script><script class="podlove-subscribe-button" src="https://cdn.podlove.org/subscribe-button/javascripts/app.js" data-language="en" data-size="big" data-json-data="podcastData" data-color="#000000" data-format="rectangle" data-style="outline"></script><noscript><a href="http://127.0.0.1:35729/category/podcast.html">Subscribe to feed</a></noscript>
+    </div>
+    <div class="subscribe-button">
+      <a href="https://geo.itunes.apple.com/us/podcast/the-super-awesome-geek-show/id968969026?mt=2" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/assets/shared/badges/en-us/itunes-lrg.svg) no-repeat;width:148px;height:51px;background-size:contain;"></a>
+    </div>
+</div>
+<h2>Episodes</h2>
+{% for article in articles_page.object_list %}
+  <h1>
+    <a href="{{ SITEURL }}/{{ article.url }}">
+    {{ article.title }}
+    </a>
+  </h1>
+
+
+
+{% endfor %}
