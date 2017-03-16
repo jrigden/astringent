@@ -35,8 +35,10 @@ The theme is installed like any ordinary pelican theme. Add these variables to t
 Articles have several unique values. These are used by AMP features.
 
  **featured_image** - *need to be image of width 1920 and height of 1080*
+ 
  **youtube** - *youtube id*
-  **podcast_url** - *url of mp3 file*
+ 
+ **podcast_url** - *url of mp3 file*
 
 ## Contact
 #### Developer/Company
