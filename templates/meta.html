@@ -1,7 +1,7 @@
 <!-- Twitter -->
 {% if article.featured_image %}
   <meta name="twitter:card" content="summary_large_image">
-  {% else %}
+{% else %}
   <meta name="twitter:card" content="summary" />
 {% endif %}
 <meta name="twitter:site" content="@{{SITE_TWITTER}}">
@@ -11,3 +11,57 @@
 {% if article.featured_image %}
   <meta name="twitter:image" content="{{ article.featured_image }}">
 {% endif %}
+
+<!-- Facebook -->
+<meta property="og:url"                content="{{ SITEURL }}/{{ article.url }}" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="{{ article.title }}" />
+<meta property="og:description"        content="{{ article.summary }}" />
+{% if article.featured_image %}
+  <meta property="og:image"            content="{{ article.featured_image }}" />
+{% endif %}
+
+<!-- SEO  -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ SITEURL }}/{{ article.url }}"
+  },
+  "headline": "{{ article.title }}",
+  {% if article.featured_image %}
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ article.featured_image }}",
+      "height": 1080,
+      "width": 1920
+    },
+  {% endif %}
+
+  "datePublished": "{{ article.date.isoformat() }}",
+
+  {% if article.modified %}
+    "dateModified": "{{ article.modified.isoformat() }}",
+  {% else %}
+    "dateModified": "{{ article.date.isoformat() }}",
+  {% endif %}
+
+  "author": {
+    "@type": "Person",
+    "name": "Jason Rigden"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Ipsut Solutions LLC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{SITE_LOGO}}",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "description": "{{ article.summary }}"
+}
+</script>

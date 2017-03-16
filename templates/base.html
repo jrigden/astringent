@@ -1,20 +1,13 @@
 <!doctype html>
 <html ⚡>
 <head>
-    {% block head %}
-
-    {% if article %}
-      <title>{{ article.title }}</title>
-    {% else %}
-      <title>{{ SITENAME }}</title>
-    {% endif %}
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    {% include 'amp.html' %}
-    {% include 'styles.html' %}
-    {% include 'feeds.html' %}
-    {% endblock head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  {% block head %}
+  {% endblock head %}
+  {% include 'amp.html' %}
+  {% include 'styles.html' %}
+  {% include 'feeds.html' %}
 </head>
 
 <body>
@@ -28,5 +21,19 @@
 
   </div>
   {% include 'footer.html' %}
+  <amp-analytics type="googleanalytics">
+    <script type="application/json">
+    {
+      "vars": {
+        "account": "{{GA_PROPERTY_ID}}"
+      },
+      "triggers": {
+        "trackPageviewWithCustomUrl": {
+          "on": "visible",
+          "request": "pageview",
+        }
+      }
+    }
+    </script>  </amp-analytics>
 </body>
 </html>

@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+{% block head %}
+  {{ super() }}
+  <title>{{ SITENAME }}</title>
+  <link rel="canonical" href="{{ SITEURL }}/blog.html" />
+
+{% endblock %}
+
 {% block content %}
 
 {% block content_title %}
@@ -6,17 +13,16 @@
 {% endblock %}
 
 {% for article in articles_page.object_list %}
-<div class="post-header">
-  <a href="{{ SITEURL }}/{{ article.url }}">
-    <h1>
-      {{ article.title }}
-    </h1>
-  </a>
-  <p>
-    {{ article.date|strftime('%B %-d, %Y') }}
-  </p>
-  <hr>
-</div>
+  <h1>
+    <a href="{{ SITEURL }}/{{ article.url }}">
+    {{ article.title }}
+    </a>
+  </h1>
+
+<p>
+  {{article.summary}}
+</p>
+<hr>
 {% endfor %}
 
 
