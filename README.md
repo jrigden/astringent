@@ -20,7 +20,7 @@ astringent
 
 ## Docs
 
-###Settings
+### Settings
 The theme is installed like any ordinary pelican theme. Add these variables to the pelicanconf.py file. Changing the values appropriately.
 
     AUTHOR_NAME = "Jason Rigden"
@@ -30,7 +30,7 @@ The theme is installed like any ordinary pelican theme. Add these variables to t
     SITE_LOGO = "Picture of Pine Trees"
     SITE_TWITTER = "ipsut_solitions"
 
-###Articles
+### Articles
 
 Articles have several unique values. These are used by AMP features.
 
